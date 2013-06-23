@@ -1,0 +1,136 @@
+<JZML>
+<WINDOW class="Container" text="laggingfader2" x="0" y="0" width="800" height="600" id="1" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="0" kbmouse_target="-2" color="2040576" label="1" tabbar="1" meta="0">
+<WINDOW class="Fader" text="value" x="20" y="75" width="75" height="362" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8355711" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.802768" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value/x" midi_target="-2" midi_trigger="1" midi_message="0xBF,0xBF,1,1" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="follower" x="100" y="75" width="84" height="362" id="1" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8421376" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.802768" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower/x" midi_target="-2" midi_trigger="1" midi_message="0xBF,0xBF,2,2" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="speed" x="192" y="75" width="48" height="431" id="2" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1660031" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.446927" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed/x" midi_target="-2" midi_trigger="1" midi_message="0xBF,0xBF,3,3" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="go" x="20" y="446" width="123" height="60" id="3" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1139856,9445792" column="1" label="1" multicolor="0" multilabel="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/go/x" midi_target="-2" midi_trigger="1" midi_message="0xBF,0xBF,10,10" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/go/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor" x="100" y="48" width="78" height="27" id="4" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="5" unit="" value="1">
+<VARIABLE name="value=follower.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/Monitor/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor2" x="9" y="49" width="78" height="27" id="5" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="5" unit="" value="1">
+<VARIABLE name="value=value.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/Monitor2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="value2" x="282" y="72" width="75" height="362" id="6" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8355711" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.802768" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value2/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,4,4" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value2/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value2/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value2/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value2/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="follower2" x="362" y="72" width="84" height="362" id="7" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8421376" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.802768" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower2/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,5,5" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower2/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower2/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower2/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower2/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="speed2" x="454" y="72" width="48" height="431" id="8" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1660031" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.446927" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed2/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,6,6" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed2/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed2/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed2/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed2/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="go2" x="282" y="443" width="123" height="60" id="9" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1139856,9445792" column="1" label="1" multicolor="0" multilabel="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/go2/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,11,11" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/go2/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor3" x="362" y="45" width="78" height="27" id="10" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="5" unit="" value="1">
+<VARIABLE name="value=follower2.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/Monitor3/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor4" x="271" y="46" width="78" height="27" id="11" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="5" unit="" value="1">
+<VARIABLE name="value=value2.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/Monitor4/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="value3" x="542" y="72" width="75" height="362" id="12" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8355711" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.802768" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value3/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,7,7" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value3/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value3/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value3/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value3/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/value3/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="follower3" x="622" y="72" width="84" height="362" id="13" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8421376" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.802768" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower3/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,8,8" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower3/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower3/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower3/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower3/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/follower3/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Fader" text="speed3" x="714" y="72" width="48" height="431" id="14" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1660031" cursor="0" grid="0" grid_steps="1" label="1" physic="1" precision="3" unit="" value="0" zoom="1.000000">
+<PARAM name="x=" value="0.446927" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed3/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,9,9" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed3/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed3/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed3/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed3/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/speed3/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="go3" x="542" y="443" width="123" height="60" id="15" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1139856,9445792" column="1" label="1" multicolor="0" multilabel="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/go3/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,12,12" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/go3/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor5" x="622" y="45" width="78" height="27" id="16" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="5" unit="" value="1">
+<VARIABLE name="value=follower3.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/Monitor5/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor6" x="531" y="46" width="78" height="27" id="17" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8355711" label="0" precision="5" unit="" value="1">
+<VARIABLE name="value=value3.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/laggingfader2/Monitor6/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<SCRIPT name="laggingfaders()" script="if (go.x==1 && value.x<follower.x) 
+{
+follower.x=follower.x-(speed.x/100);
+if (value.x>=follower.x) go.x=0 && (follower.x=value.x);
+}
+if (go.x==1 && value.x>follower.x) 
+{
+follower.x=follower.x+(speed.x/100);
+if (value.x<=follower.x) go.x=0 && (follower.x=value.x);
+}" trigger_script="" trigger_type="1" trigger="1" osc_message="/laggingfader2/laggingfaders" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+<SCRIPT name="laggingfaders2()" script="if (go2.x==1 && value2.x<follower2.x) 
+{
+follower2.x=follower2.x-(speed2.x/100);
+if (value2.x>=follower2.x) go2.x=0 && (follower2.x=value2.x);
+}
+if (go2.x==1 && value2.x>follower2.x) 
+{
+follower2.x=follower2.x+(speed2.x/100);
+if (value2.x<=follower2.x) go2.x=0 && (follower2.x=value2.x);
+}" trigger_script="" trigger_type="1" trigger="1" osc_message="/laggingfader2/laggingfaders2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="laggingfaders3()" script="if (go3.x==1 && value3.x<follower3.x) 
+{
+follower3.x=follower3.x-(speed3.x/100);
+if (value3.x>=follower3.x) go3.x=0 && (follower3.x=value3.x);
+}
+if (go3.x==1 && value3.x>follower3.x) 
+{
+follower3.x=follower3.x+(speed3.x/100);
+if (value3.x<=follower3.x) go3.x=0 && (follower3.x=value3.x);
+}" trigger_script="" trigger_type="1" trigger="1" osc_message="/laggingfader2/laggingfaders3" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</JZML>

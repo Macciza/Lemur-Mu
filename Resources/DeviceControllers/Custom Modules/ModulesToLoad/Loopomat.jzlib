@@ -1,0 +1,392 @@
+<JZML>
+<WINDOW class="Container" text="Loopomat" x="0" y="0" width="800" height="600" id="24" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-1" kbmouse_target="-2" color="7929874" label="1" tabbar="1" meta="0">
+<WINDOW class="Range" text="Recordindicator" x="620" y="126" width="26" height="414" id="34" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="3427503" grid="0" grid_steps="1" horizontal="0" label="0" physic="0">
+<PARAM name="x=" value="0.005865,0.214076" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="min_height=0.25" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/min_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="max_height=0.75" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/max_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="drag=" value="0.000000" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Recordindicator/drag" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="initial()" script="x[0]=current_frame/1023;
+x[1]=current_frame/1023;" trigger_script="Rec.x" trigger_type="0" trigger="2" osc_message="/Loopomat/Recordindicator/initial" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+<SCRIPT name="value()" script="if (Rec.x && x[0]>current_frame/1023) x[0]=current_frame/1023;
+if (Rec.x &&x[1]<current_frame/1023) x[1]=current_frame/1023;" trigger_script="Rec.x==1" trigger_type="1" trigger="1" osc_message="/Loopomat/Recordindicator/value" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="Range" text="Positionindicator" x="633" y="126" width="27" height="414" id="35" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="8388608" grid="0" grid_steps="1" horizontal="0" label="0" physic="0">
+<PARAM name="x=" value="0.000000,0.030000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="min_height=0.25" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/min_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="max_height=0.75" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/max_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="drag=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/drag" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="size=0.03" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Positionindicator/size" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="update()" script="	decl pos = (current_frame/1023)*(1-size);
+	x[0] = pos;
+	x[1] = pos+size;" trigger_script="current_frame" trigger_type="0" trigger="1" osc_message="/Loopomat/Positionindicator/update" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="Multiball" text="Multiball" x="36" y="39" width="500" height="500" id="36" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="687993" cursor="1" ephemere="0" grid="0" grid_steps="1,1" label="0" nbr="1" physic="2" polyphony="0" zoom="1.000000">
+<PARAM name="x=" value="0.479618" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="y=" value="0.224978" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/y" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/z" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/attraction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=PhyGrip.x*Fly.x" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=range(PhySpeed.x, 0, 3)" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/speed" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/attack" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/decay" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/sustain" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/release" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/hold" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="holdX=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/holdX" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="holdY=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Multiball/holdY" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Rec" x="716" y="514" width="65" height="65" id="37" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-1" kbmouse_target="-2" behavior="0" bitmap="3,2" capture="1" color="6639360,8388608" label_off="" label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rec/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rec/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="recording=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rec/recording" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="action()" script="record_length = current_frame;
+recording = x;
+Speed.x=0.5;
+if (x) setattribute(Text, 'content', 'Recording');
+else if (Play.x) setattribute(Text, 'content', 'Playing');
+else setattribute(Text, 'content', 'Manual');" trigger_script="x" trigger_type="0" trigger="1" osc_message="/Loopomat/Rec/action" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Play" x="716" y="443" width="65" height="65" id="38" state="241" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" behavior="0" bitmap="1,6" capture="1" color="6639360,32768" label_off="" label_on="" outline="1">
+<PARAM name="x=" value="0.000000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Play/x" midi_target="-2" midi_trigger="1" midi_message="0x80,0x80,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Play/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="action()" script="if (x) setattribute(Text, 'content', 'Playing');
+else if (Rec.x) setattribute(Text, 'content', 'Recording');
+else setattribute(Text, 'content', 'Stand-by');" trigger_script="x" trigger_type="0" trigger="4" osc_message="/Loopomat/Play/action" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor" x="317" y="216" width="46" height="30" id="39" state="245" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="29563" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=floor(current_frame)" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Monitor/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text" x="194" y="216" width="97" height="30" id="40" state="245" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="29563" content="Manual">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="Speed" x="543" y="126" width="58" height="309" id="41" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="8421376" gradient="1" grid="0" grid_steps="1" horizontal="0" label="1" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.500000" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Speed/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Speed/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Speed/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Speed/height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Speed/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Range" text="Rv" x="0" y="32" width="30" height="513" id="42" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="32768" grid="0" grid_steps="1" horizontal="0" label="0" physic="0">
+<PARAM name="x=" value="0.120654,0.869121" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="min_height=0.25" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/min_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="max_height=0.75" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/max_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=Truey.x/2-0.4" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="drag=" value="0.000000" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rv/drag" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Range" text="Rh" x="32" y="545" width="506" height="30" id="43" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1981311" grid="0" grid_steps="1" horizontal="1" label="0" physic="0">
+<PARAM name="x=" value="0.124481,0.914938" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="min_height=0.25" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/min_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="max_height=0.75" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/max_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=Truex.x/2-0.4" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="drag=" value="0.000000" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rh/drag" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Fly" x="543" y="2" width="82" height="35" id="44" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="8347756,4653073" column="1" label="0" multicolor="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="1.000000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Fly/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=Physics.x-1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Fly/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="display()" script="if (x==1) setattribute (Text8,'content','');
+if (x==0) setattribute (Text8,'content','fly ball, fly...');" trigger_script="x" trigger_type="0" trigger="4" osc_message="/Loopomat/Fly/display" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="PhyGrip" x="534" y="45" width="258" height="32" id="45" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="4522779" gradient="1" grid="0" grid_steps="1" horizontal="1" label="1" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.497696" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhyGrip/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhyGrip/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhyGrip/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhyGrip/height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=Fly.x-1+Physics.x-1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhyGrip/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="PhySpeed" x="534" y="84" width="258" height="34" id="46" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="4522779" gradient="1" grid="0" grid_steps="1" horizontal="1" label="1" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.635135" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhySpeed/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhySpeed/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhySpeed/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhySpeed/height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=Physics.x-1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/PhySpeed/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitorx" x="260" y="498" width="57" height="33" id="47" state="245" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=outx*127" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Monitorx/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitory" x="44" y="263" width="57" height="33" id="48" state="213" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=outy*127" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Monitory/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="CustomButton" text="Direction" x="716" y="340" width="65" height="80" id="49" state="241" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" behavior="0" bitmap="8,7" capture="1" color="1660031,4325462" label_off="rev" label_on="fwd" outline="1">
+<PARAM name="x=" value="1.000000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Direction/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Direction/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Range" text="Looprange" x="653" y="126" width="55" height="414" id="50" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="128" grid="0" grid_steps="1" horizontal="0" label="0" physic="0">
+<PARAM name="x=" value="0.005865,0.214076" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/tension" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/friction" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="min_height=0.25" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/min_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="max_height=0.75" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/max_height" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="drag=" value="0.000000" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Looprange/drag" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="setlength()" script="if (Rec.x==0) return;
+{
+	decl pos = (current_frame/1023)*(1);
+	x[0] = 0;
+	x[1] = pos;
+}" trigger_script="" trigger_type="1" trigger="1" osc_message="/Loopomat/Looprange/setlength" midi_message="0x90,0x90,0,0" midi_target="-2" flag="0"/>
+<SCRIPT name="inital()" script="if (Automarker.x==0) return;
+x[0]=current_frame/1023;
+x[1]=current_frame/1023;" trigger_script="Rec.x" trigger_type="0" trigger="2" osc_message="/Loopomat/Looprange/inital" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+<SCRIPT name="value()" script="if (Automarker.x==0) return;
+
+if (Rec.x && x[0]>current_frame/1023) x[0]=current_frame/1023;
+if (Rec.x &&x[1]<current_frame/1023) x[1]=current_frame/1023;" trigger_script="" trigger_type="1" trigger="1" osc_message="/Loopomat/Looprange/value" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="Pads" text="Jumper" x="715" y="120" width="65" height="200" id="51" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="7884288,944013" column="1" label="1" multicolor="0" multilabel="0" row="4">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/attack" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/decay" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/sustain" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/release" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/hold" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Jumper/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="positionjump()" script="if (x[3]==1){current_frame=0};
+else if (x[2]==1){current_frame=loopstart};
+else if (x[1]==1){current_frame=loopend};
+else if (x[0]==1){current_frame=1023};" trigger_script="x" trigger_type="0" trigger="2" osc_message="/Loopomat/Jumper/positionjump" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitorls" x="729" y="239" width="35" height="24" id="52" state="245" group="0" font="tahoma,15,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=loopstart" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Monitorls/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitorls2" x="729" y="192" width="35" height="24" id="53" state="245" group="0" font="tahoma,15,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=loopend" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Monitorls2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text3" x="723" y="283" width="50" height="26" id="54" state="245" group="0" font="tahoma,15,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" content="0">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text3/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Playtype" x="543" y="435" width="70" height="144" id="55" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="8421376,1660031" column="1" label="1" multicolor="0" paint="1" radio="1" row="3">
+<PARAM name="x=" value="0.000000,1.000000,0.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Playtype/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Playtype/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text4" x="547" y="446" width="62" height="51" id="56" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="0" content="One Shot">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text4/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text5" x="721" y="145" width="50" height="27" id="57" state="245" group="0" font="tahoma,15,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" content="1023">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text5/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Physics" x="671" y="0" width="113" height="37" id="58" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="4522779,4522779" column="1" label="0" multicolor="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="1.000000" send="16" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Physics/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=x/2" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Physics/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="setballtype()" script="if (x==1) 
+{
+setattribute (Multiball,'physic',2);
+setattribute (Text7,'content','Mass-Spring');
+}
+else
+{
+setattribute (Multiball,'physic',0);
+setattribute (Text7,'content','direct');
+}
+" trigger_script="x" trigger_type="0" trigger="4" osc_message="/Loopomat/Physics/setballtype" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text6" x="702" y="6" width="53" height="23" id="59" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="327730" content="Physics">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text6/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text7" x="206" y="246" width="167" height="30" id="60" state="245" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="6946901" content="Mass-Spring">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text7/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text8" x="206" y="276" width="167" height="30" id="61" state="245" group="0" font="tahoma,20,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="6946901" content="">
+<VARIABLE name="light=(Physics.x*3)-2" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text8/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Automarker" x="625" y="531" width="83" height="49" id="62" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="128,9445792" column="1" label="1" multicolor="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Automarker/x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Automarker/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text2" x="639" y="172" width="50" height="278" id="63" state="245" group="0" font="tahoma,22,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" color="7274518" content="  A     u      t     o     m    a     r     k     e   r">
+<VARIABLE name="light=-2+Automarker.x*2" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Monitor2" x="725" y="418" width="46" height="26" id="64" state="245" group="0" font="tahoma,12,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="8388608" label="0" precision="3" unit="" value="1">
+<VARIABLE name="value=floor(current_frame)" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Monitor2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Xch1" x="373" y="0" width="30" height="30" id="66" state="241" group="0" font="tahoma,16,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" scale="0" content="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">
+<PARAM name="selection=" value="5.000000" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Xch1/selection" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Xcc1" x="505" y="0" width="28" height="30" id="68" state="241" group="0" font="tahoma,16,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" scale="0" content="0,1,2,3,4,5,6,7,8,9">
+<PARAM name="selection=" value="2.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Xcc1/selection" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text9" x="308" y="0" width="62" height="30" id="69" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" content="channel">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text9/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text10" x="405" y="0" width="75" height="30" id="70" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" content="controller">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text10/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text11" x="547" y="489" width="62" height="51" id="72" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="0" content="Loop">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text11/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text12" x="539" y="531" width="77" height="51" id="73" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="0" content="Alternate">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text12/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Ych1" x="106" y="0" width="30" height="30" id="74" state="241" group="0" font="tahoma,16,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" scale="0" content="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16">
+<PARAM name="selection=" value="5.000000" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Ych1/selection" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Ycc1" x="236" y="0" width="28" height="30" id="76" state="241" group="0" font="tahoma,16,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" scale="0" content="0,1,2,3,4,5,6,7,8,9">
+<PARAM name="selection=" value="1.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Ycc1/selection" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text13" x="39" y="0" width="62" height="30" id="77" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" content="channel">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text13/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text14" x="136" y="0" width="75" height="30" id="78" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" content="controller">
+<VARIABLE name="light=0" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text14/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Xcc10" x="482" y="0" width="30" height="30" id="79" state="241" group="0" font="tahoma,16,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" color="1660031" scale="0" content="0,1,2,3,4,5,6,7,8,9,10,11,12">
+<PARAM name="selection=" value="6.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Xcc10/selection" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="LemurMenu" text="Ycc10" x="213" y="0" width="30" height="30" id="80" state="241" group="0" font="tahoma,16,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" color="32768" scale="0" content="0,1,2,3,4,5,6,7,8,9,10,11,12">
+<PARAM name="selection=" value="6.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Ycc10/selection" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Truex" x="2" y="545" width="35" height="35" id="81" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="1139856,9445792" column="1" label="0" multicolor="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Truex/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Truex/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Switches" text="Truey" x="0" y="0" width="35" height="35" id="82" state="1" group="0" font="tahoma,10,0" send="0" osc_target="-2" midi_target="-1" kbmouse_target="-2" capture="1" color="32768,9445792" column="1" label="0" multicolor="0" paint="0" radio="0" row="1">
+<PARAM name="x=" value="1.000000" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Truey/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=x" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Truey/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Rvmon1" x="-2" y="516" width="33" height="29" id="83" state="245" group="0" font="tahoma,12,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=Rv.x[0]*127" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rvmon1/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Rvmon2" x="-1" y="31" width="33" height="29" id="84" state="245" group="0" font="tahoma,12,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=Rv.x[1]*127" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rvmon2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Rhmon1" x="30" y="547" width="33" height="29" id="85" state="245" group="0" font="tahoma,12,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=Rh.x[0]*127" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rhmon1/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Monitor" text="Rhmon2" x="509" y="545" width="33" height="29" id="86" state="245" group="0" font="tahoma,12,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" label="0" precision="0" unit="" value="1">
+<VARIABLE name="value=Rh.x[1]*127" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Rhmon2/value" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text15" x="211" y="470" width="162" height="38" id="87" state="245" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1660031" content="no ball variation">
+<VARIABLE name="light=-(Truex.x*2)" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text15/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="Text" text="Text16" x="77" y="257" width="97" height="43" id="88" state="213" group="0" font="tahoma,14,0" send="0" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="32768" content="no ball variation">
+<VARIABLE name="light=-(Truey.x*2)" send="0" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/Text16/light" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="record_x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.292490,0.500160,0.525606,0.549347,0.565966,0.579971,0.590960,0.595095,0.587317,0.581873,0.550789,0.507687,0.463286,0.426277,0.400370,0.379864,0.364324,0.359374,0.371325,0.379690,0.409261,0.441819,0.472910,0.505345,0.528050,0.547500,0.567045,0.581912,0.587575,0.591540,0.578900,0.557009,0.531013,0.498586,0.475888,0.452884,0.427296,0.409384,0.396845,0.388068,0.389039,0.399205,0.416993,0.443674,0.462350,0.482538,0.518014,0.545219,0.564262,0.577592,0.570322,0.545075,0.509616,0.484794,0.444890,0.409842,0.378194,0.351297,0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record_x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="-1,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record_y=" value="0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.019841,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.119048,0.441934,0.442687,0.440833,0.439536,0.436246,0.422039,0.407332,0.392275,0.381736,0.369596,0.365860,0.370388,0.379510,0.385895,0.395126,0.426588,0.456945,0.487719,0.509260,0.530292,0.546204,0.552581,0.548712,0.546003,0.540535,0.518851,0.487005,0.455189,0.432918,0.408995,0.391059,0.380884,0.383285,0.384966,0.395667,0.423395,0.448758,0.471273,0.487034,0.500448,0.511028,0.514862,0.511594,0.509306,0.501752,0.473846,0.447168,0.415399,0.393160,0.358545,0.330744,0.312473,0.299683,0.302636,0.313035,0.331030,0.353149" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record_y" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record_length=" value="0" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record_length" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="current_frame=0" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/current_frame" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="-1,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record2_x=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record2_x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record2_y=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record2_y" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record3_x=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record3_x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="771,3,768" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record3_y=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record3_y" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record4_x=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record4_x" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="record4_y=" value="0.000000" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/record4_y" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="outx=Truex.x?(range(Multiball.x, Rh.x[0], Rh.x[1])):(Rh.x[0]+Rh.x[1])/2" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/outx" midi_target="-1" midi_trigger="1" midi_message="0xB0,0xB0,44,44" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="outy=Truey.x?range(Multiball.y, Rv.x[0], Rv.x[1]):(Rv.x[0]+Rv.x[1])/2" send="17" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/outy" midi_target="-1" midi_trigger="1" midi_message="0xB0,0xB0,45,45" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="8765,25924,24934" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="loopstart=range(Looprange.x[0], 0, 1023)" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/loopstart" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="6994,64,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="loopend=range(Looprange.x[1], 0, 1023)" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/loopend" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="channelx=Xch1.selection+1" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/channelx" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="-1,-1,-1" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="controllerx=Xcc10.selection*10+Xcc1.selection" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/controllerx" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="channely=Ych1.selection+1" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/channely" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="controllery=Ycc10.selection*10+Ycc1.selection" send="1" osc_target="-2" osc_trigger="1" osc_message="/Loopomat/controllery" midi_target="-2" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-2" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<MIDIOUT name="outx" message="0xB0" data1="controllerx" data2="outx" channel="channelx" trigger_script="Multiball.x" target="0" trigger="1,1,1,1" scale="0,16383" flag="17"/>
+<MIDIOUT name="outy" message="0xB0" data1="controllery" data2="outy" channel="channely" trigger_script="Multiball.y" target="0" trigger="1,1,1,1" scale="0,16383" flag="17"/>
+<SCRIPT name="recorder()" script="if (Rec.recording)
+{
+	if (current_frame<0) 
+	{
+		current_frame=0;
+		Rec.x=0 ;
+	}
+	else if (current_frame<256)
+	{
+		record_x[current_frame] = Multiball.x;
+		record_y[current_frame] = Multiball.y;
+	}
+	else if (current_frame<512)
+	{
+		record2_x[(current_frame%256)] = Multiball.x;
+		record2_y[(current_frame%256)] = Multiball.y;
+	}
+	else if (current_frame<768)
+	{
+		record3_x[(current_frame%256)] = Multiball.x;
+		record3_y[(current_frame%256)] = Multiball.y;
+	}
+	else if (current_frame<1024)
+	{
+		record4_x[(current_frame%256)] = Multiball.x;
+		record4_y[(current_frame%256)] = Multiball.y;
+	}
+	else if (current_frame>1024) Rec.x=0;
+
+
+if (Direction.x==1)
+	{
+	current_frame++;
+
+	if (current_frame>=loopend)
+	{
+		if (Playtype.x[1]==1 && Automarker.x==0) current_frame = loopstart;
+		else if (Playtype.x[2]==1 && Automarker.x==0) Direction.x = 0; 
+	} 
+	}
+
+if (Direction.x==0 && current_frame>0)
+	{
+	current_frame--;
+
+	if (current_frame<=loopstart)
+	{
+		if (Playtype.x[1]==1 && Automarker.x==0) current_frame = loopend;
+		else if (Playtype.x[2]==1 && Automarker.x==0) Direction.x = 1; 
+	}
+	}
+}" trigger_script="" trigger_type="1" trigger="1" osc_message="/Loopomat/recorder" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+<SCRIPT name="player()" script="if (Play.x && !Rec.x)
+{
+	if (current_frame<256)
+	{
+		Multiball.x = record_x[current_frame];
+		Multiball.y = record_y[current_frame];
+	}
+	else if (current_frame<512)
+	{
+		Multiball.x=record2_x[(current_frame%256)];
+		Multiball.y=record2_y[(current_frame%256)];	
+	}
+	else if (current_frame<768)
+	{
+		Multiball.x=record3_x[(current_frame%256)];
+		Multiball.y=record3_y[(current_frame%256)];
+	}
+	else if (current_frame<1024)
+	{
+		Multiball.x=record4_x[(current_frame%256)];
+		Multiball.y=record4_y[(current_frame%256)];
+	}
+if (Direction.x==1)
+	{
+	current_frame += 2*Speed.x;
+
+	if (current_frame>=loopend)
+	{
+		if (Playtype.x[1]==1) current_frame = loopstart;
+		else if (Playtype.x[2]==1) Direction.x = 0; 
+	} 
+	}
+
+if (Direction.x==0)
+	{
+	current_frame -= 2*Speed.x;
+
+	if (current_frame<=loopstart)
+	{
+		if (Playtype.x[1]==1) current_frame = loopend;
+		else if (Playtype.x[2]==1) Direction.x = 1; 
+	}
+	}
+if (current_frame>1023) current_frame=1023;
+if (current_frame<0) current_frame=0;
+}" trigger_script="" trigger_type="1" trigger="1" osc_message="/Loopomat/player" midi_message="0x90,0x90,0,0" midi_target="-2" flag="1"/>
+</WINDOW>
+</JZML>

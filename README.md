@@ -3,11 +3,12 @@ Lemur-Mu
 
 Lemur &amp; Max for Live devices, patches and templates
 
-Initial Fork : June 2013
+Initial Release : June 2013
 
-URGENT - Update to current version 1.2 - In progress
+CURRENT - Updated to current version 1.2 - more or less complete.
+        - Continuing minor update work for Lemur 4 / Live 9 etc
 
-IN DEVELOPMENT - Live 9 and 64 bit compatability
+* DEVELOPMENT - Full Live 9 / 64 bit compatability / Extended capabilities
 
 CC Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 http://creativecommons.org/licenses/by-nc-sa/3.0/

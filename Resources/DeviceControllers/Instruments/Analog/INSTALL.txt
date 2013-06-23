@@ -1,0 +1,48 @@
+----------------------------------------------------------------------------------------------------------------------
+Analog_SH  Version 1.2 by Sébastien Harvey
+
+Contact : sebastien.harvey[a]hotmail.com
+
+Mu / DeviceController / Instruments
+
+----------------------------------------------------------------------------------------------------------------------
+Bug fixed :
+
+- Every parameters reset on slower system
+- ADSR parameters reset
+
+----------------------------------------------------------------------------------------------------------------------
+A device controller for the Analog Instrument in Ableton Live 8 :
+
+Control EVERY parameters of the Analog instrument.
+
+- Osc section
+- Filter section
+- Amp section
+- LFO section
+- Noise section
+- General section
+
+
+Don't be limited by the 4mb of the Lemur's memory. 
+
+Analog SH 1.2 allows the dynamic multi-modules loading.
+
+Everything is available in the same interface, never using more than 18% of the Lemur's memory.
+
+Includes an efficient Breakpoint object to control ADSR !
+ 
+----------------------------------------------------------------------------------------------------------------------
+
+INSTALL Analog_SH :
+
+Step 1 :
+
+- Copy the "Analog_SH.jzlib" file, the "Analog_SH.maxpat" file and the "Content" folder in 
+  \Mu\Resources\DeviceControllers\Instruments\Analog 
+  
+Step 2 :
+
+- Enjoy
+
+-----------------------------------------------------------------------------------------------------------------------
